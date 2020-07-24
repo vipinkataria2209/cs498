@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Narrative Visualization-CS489</title>
+    <link rel="stylesheet" type="text/css" href="chart.css"/>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="sceneProcessor.js"></script>
+    <script type="text/javascript" src="chart_engine_v1.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v5.js"></script>
+
+</head>
+<body onload="init()">
+<div class="container-fluid">
+    <div class="header">
+        Narrative Visualization- Covid-19 Deaths/NewCases In USA
+        <hr/>
+    </div>
+    <div class="tool_box">
+        <ul class="pagination">
+            <li><a onclick="handlePreviousScene()">«</a></li>
+            <li><a style="background-color: red;color:white" onclick="handleUserDrivenScene(0)">1</a></li>
+            <li><a onclick="handleUserDrivenScene(1)">2</a></li>
+            <li><a onclick="handleUserDrivenScene(2)">3</a></li>
+            <li><a onclick="handleNextScene()">»</a></li>
+        </ul><!--
+        <button type="button" class="btn btn-outline-secondary"><a href="about.html"> About the Visualization</a>
+        </button>
+        -->
+    </div>
+    <hr/>
+    <div class="scene3box" id="scene2_id" style="visibility: hidden;display: inline-block">
+        <div class="dropdownbox" style="float: left">
+            <div style="float: left;font-weight: bold;margin-right: 5px">State</div>
+            <select id="d3-dropdown">
+            </select>
+        </div>
+        <div class="radiobuttonbox" style="float: left">
+            <form id="test">
+                <label><input type="radio" name="test" value="A" checked> NewCases</label>
+                <label><input type="radio" name="test" value="B"> Deaths</label>
+            </form>
+        </div>
+    </div>
+    <div class="charteventbox">
+        <div class="two">
+            <div class="card-header">
+                Information
+            </div>
+            <div class="card-body" id="scene_1">
+                <ul>
+                    <li>
+                        In this Scene we could see that New Cases of Covid-19 keep increasing
+                    </li>
+                    <li>
+                        Highest Number of New Cases Covid-19 was recored on 17th July 2020
+                    </li>
+                </ul>
+
+            </div>
+            <div class="card-body" id="scene_2" style="display: none">
+                <ul>
+                    <li>
+                        Highest Number of New Cases Covid-19 was recored on 17th July 2020
+                    </li>
+                    <li>
+                        Highest Number of New Cases Covid-19 was recored on 17th July 2020
+                    </li>
+                </ul>
+
+            </div>
+            <div class="card-body" id="scene_3" style="display: none">
+                <ul>
+                    <li>
+                        In this Scene we could see that New Cases of Covid-19 keep increasing
+                    </li>
+                    <li>
+                        In this Scene we could see that New Cases of Covid-19 keep increasing
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="my_dataviz" class="one">
+            <svg>
+                <div id="mybar">
+
+                </div>
+            </svg>
+        </div>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>
